@@ -1,0 +1,119 @@
+:root {
+  --bg: rgb(60, 50, 81);
+  --warna-1: rgb(100, 70, 110);
+  --warna-2: rgb(250, 124, 134);
+  --warna-3: rgb(168, 77, 118);
+  --warna-4: rgb(231, 252, 171);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato;
+  letter-spacing: 0.1rem;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(60, 50, 81),
+    rgb(100, 70, 110)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7rem;
+}
+
+.linktree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(250, 124, 134, 0.5),
+    rgba(168, 77, 118, 0.2)
+  );
+  border-radius: 15px;
+  margin-bottom: 7rem;
+}
+
+.nama-page {
+  background: url(https://media.giphy.com/media/BHNfhgU63qrks/giphy.gif);
+  background-size: 50%;
+  background-position: bottom-right;
+  -webkit-background-clip: text;
+  color: rgba(231, 252, 171, 0.5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nama-page::before {
+  content: "Hi, Iam ";
+  color: var(--warna-4);
+  display: block;
+  font-size: 1.2rem;
+  font-family: Josefin Sans;
+  margin-top: 10px;
+}
+
+.linktree .bottom {
+  background-color: rgba(250, 124, 134, 0.2);
+  margin-bottom: 1.2rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 12px rgba(100, 70, 110, 0.5);
+  transition: transform 1000ms;
+  transition: background-color 700ms;
+  position: relative;
+}
+
+/* .linktree .my-work::after {
+  content: "Masih pengerjaan";
+  position: absolute;
+  color: white;
+  background-color: rgba(60, 50, 81, .7);
+  padding: 7px;
+  white-space: nowrap;
+  bottom: -40px;
+  right: 0;
+  left: 0;
+} */
+
+.linktree .bottom .menu {
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  color: rgba(231, 252, 171, 0.85);
+  text-decoration: none;
+  display: block;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: var(--bg);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: var(--warna-1);
+  font-size: 0.8rem;
+}
+
+footer span::after {
+  content: "| All right reserved";
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+@media (hover) {
+  .linktree .bottom:hover {
+    transform: scale(0.95);
+    background-color: rgba(250, 124, 134, 0.35);
+  }
+}
